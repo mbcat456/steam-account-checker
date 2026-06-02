@@ -33,14 +33,14 @@ create a file named `proxies.txt` in the same directory as the script. paste you
 - `http://user:pass@ip:port`
 
 Accounts:
-have a combo file ready with your accounts formatted as `username:password` per line. the file can have any name — you'll type it at the prompt.
+have a combo file ready with your accounts formatted as `username:password` per line.
 
 ### Usage
 
 Run the script from your terminal:
 
 ```bash
-python v5_rewrite.py
+python checker.py
 ```
 
 The script will prompt you for a few things:
