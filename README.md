@@ -1,6 +1,6 @@
 # Steam account checker
 
-Multithreaded python steam account checker. It validates accounts through Steam's public API, then pulls full profile stats including wallet balance, game library, country, and VAC ban status.
+Multithreaded python steam account checker. It validates accounts through Steam's API, then pulls full profile stats including wallet balance, game library, country, and VAC ban status.
 
 ### Features
 - multithreaded login checking with live progress bar and valid printing
@@ -26,7 +26,7 @@ pip install -r requirements.txt
 Before running the checker, you need to set up your proxies and combo list.
 
 Proxies:
-create a file named `proxies.txt` in the same directory as the script. paste your proxies inside, one per line. if `proxies.txt` is missing, the script will ask you to point at another proxy file — it won't run without one. the parser auto-detects any standard format:
+create a file named `proxies.txt` in the same directory as the script. paste your proxies inside, one per line. the parser auto-detects any standard format:
 - `ip:port`
 - `ip:port:user:pass`
 - `user:pass@ip:port`
