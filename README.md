@@ -50,7 +50,7 @@ The script will prompt you for a few things:
 
 If a previous session is found for the same combo file, it asks whether to resume from where you left off.
 
-Once it starts, it cycles through your proxies automatically. the bar at the bottom tracks progress in real time. valid hits print above the bar as they're found. invalid passwords and 2fa accounts are silent — the bar counters cover them.
+Once it starts, it cycles through your proxies automatically. the bar at the bottom tracks progress in real time. valid hits print above the bar as they're found.
 
 ### Output files
 - `hits.txt` — valid accounts with full profile data
